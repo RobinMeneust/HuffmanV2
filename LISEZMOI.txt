@@ -1,0 +1,62 @@
+/////////////////////
+CODAGE HUFFMAN
+/////////////////////
+
+	Dans ce fichier quand une commande est écrite entre guillemets ("") écrivez-la sans ces derniers (ex. "make" devient make).
+
+
+/////////////////////
+INSTALLATION
+
+	Nécessite la fonction make pour la compilation.
+
+/////////////////////
+COMPILATION
+
+	Tapez "make" dans la console.
+
+/////////////////////
+EXECUTION
+
+	Vous pouvez utiliser "make run" et ensuite suivre les instructions à l'écran.
+	Mais vous pouvez aussi taper, en étant dans le dossier contenant l'exécutable, les commandes suivantes avec des paramètres :
+	"./huffman.exe" sous linux
+	".\huffman.exe" sous windows
+
+	Si vous avez changé le nom de votre exécutable, remplacez huffman.exe par le nom de cet exécutable dans les commandes ci-dessus. 
+
+	Tapez "huffman.exe -h" pour afficher l'aide ou lisez la section AIDE à la fin de ce fichier pour connaître toutes les options.
+
+
+/////////////////////
+DIVERS
+
+	Le fichier de sortie (où le résultat sera enregistré) ne doit pas avoir le même nom que l'exécutable.
+	Un fichier vide ne sera pas compressé.
+	S'il y a peu de caractères identiques dans le fichier à compresser, la compression sera inefficace.
+	S'il n'y a qu'un seul caractère, qui apparaît plusieurs fois alors le fichier compressé ne contiendra qu'une entête, car le code Huffman est ici inutile : on n'utilise pas un arbre. On n'a besoin que du caractère et de la taille du fichier.
+	Pour générer la documentation doxygen, tapez "make doc"
+	Pour supprimer les fichiers .o, vous pouvez taper "make cleanwin" sous Windows ou "make cleanlinux" sous Linux.
+
+
+/////////////////////
+AIDE :
+
+
+
+	NOM
+		huffman
+
+	SYNOPSIS
+		huffman
+		huffman [OPTION] SOURCE DEST
+
+	DESCRIPTION
+		Compresse ou décompresse le fichier SOURCE en utilisant le codage Huffman et l'enregistre dans le fichier DEST.
+
+		-h
+			affiche l'aide et quitte.
+		-c
+			compresse SOURCE vers DEST.
+		-d
+			décompresse SOURCE vers DEST.
